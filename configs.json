@@ -1,0 +1,17 @@
+{
+  "player_configs": {
+    "players_count": 2,
+    "initial_player_coin": 4,
+    "coin_put_amount": 1
+  },
+
+  "pot_configs": {
+    "initial_pot_coin": 2,
+    "allow_zero_coin_draw": true
+  },
+
+  "simulation_configs": {
+    "repetition": 1000,
+    "verbose_output": false
+  }
+}

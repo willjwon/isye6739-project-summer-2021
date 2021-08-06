@@ -1,8 +1,11 @@
+# simulation result
+simulation_result/
+
 # macOS
 .DS_Store
 
 # Python
-.__pycache__/
+__pycache__/
 
 # PyCharm
 .idea/
