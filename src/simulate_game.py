@@ -108,4 +108,4 @@ if __name__ == '__main__':
         os.makedirs('../simulation_result/')
 
     with open(file='../simulation_result/simulation_result.pickle', mode='wb') as file:
-        pickle.dump(obj=[turns, cycles, winner_coins, pot_coins], file=file)
+        pickle.dump(obj=[configs, turns, cycles, winner_coins, pot_coins], file=file)

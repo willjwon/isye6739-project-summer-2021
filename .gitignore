@@ -1,5 +1,6 @@
 # simulation result
 simulation_result/
+graph/
 
 # macOS
 .DS_Store

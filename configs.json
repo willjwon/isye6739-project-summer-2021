@@ -11,7 +11,7 @@
   },
 
   "simulation_configs": {
-    "repetition": 1000,
+    "repetition": 100000,
     "verbose_output": false
   }
 }
