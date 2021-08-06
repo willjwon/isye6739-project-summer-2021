@@ -28,7 +28,7 @@ def plot_winner_coins(configs: Dict, data: pd.DataFrame) -> None:
     fig, ax = plt.subplots(nrows=1, ncols=1)
     sns.lineplot(data=data,
                  x='WinnerCoins', y='Frequency',
-                 linewidth=3,
+                 linewidth=4,
                  ax=ax)
     ax.set_xlabel('Winner Coins', weight='bold')
     ax.set_ylabel('Probability', weight='bold')
@@ -38,7 +38,7 @@ def plot_winner_coins(configs: Dict, data: pd.DataFrame) -> None:
 
     fig.set_size_inches(7, 5)
     fig.tight_layout()
-    fig.show()
+    # fig.show()
     fig.savefig('../graph/winner_coins.pdf')
     fig.clf()
     plt.close(fig=fig)

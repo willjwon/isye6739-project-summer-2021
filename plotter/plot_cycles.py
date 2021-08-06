@@ -28,7 +28,7 @@ def plot_cycles(configs: Dict, data: pd.DataFrame) -> None:
     fig, ax = plt.subplots(nrows=1, ncols=1)
     sns.lineplot(data=data,
                  x='Cycle', y='Frequency',
-                 linewidth=3,
+                 linewidth=4,
                  ax=ax)
     ax.set_xlabel('Cycles', weight='bold')
     ax.set_ylabel('Probability', weight='bold')
@@ -38,13 +38,15 @@ def plot_cycles(configs: Dict, data: pd.DataFrame) -> None:
 
     fig.set_size_inches(7, 5)
     fig.tight_layout()
-    fig.show()
+    # fig.show()
     fig.savefig('../graph/cycles.pdf')
     fig.clf()
     plt.close(fig=fig)
 
 
 def compute_average(configs: Dict, data: pd.DataFrame) -> float:
+    data.sort_values(by='Frequency', axis='index', ascending=False, inplace=True)
+    print(data.head(3).to_string())
     return sum(data['Cycle'] * data['Frequency'])
 
 

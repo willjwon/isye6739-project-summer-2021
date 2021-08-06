@@ -28,7 +28,7 @@ def plot_pot_coins(configs: Dict, data: pd.DataFrame) -> None:
     fig, ax = plt.subplots(nrows=1, ncols=1)
     sns.lineplot(data=data,
                  x='PotCoins', y='Frequency',
-                 linewidth=3,
+                 linewidth=4,
                  ax=ax)
     ax.set_xlabel('Pot Coins', weight='bold')
     ax.set_ylabel('Probability', weight='bold')
@@ -38,7 +38,7 @@ def plot_pot_coins(configs: Dict, data: pd.DataFrame) -> None:
 
     fig.set_size_inches(7, 5)
     fig.tight_layout()
-    fig.show()
+    # fig.show()
     fig.savefig('../graph/pot_coins.pdf')
     fig.clf()
     plt.close(fig=fig)
@@ -53,4 +53,4 @@ if __name__ == '__main__':
     plot_pot_coins(configs=configs, data=data)
 
     average_cycles = compute_average(configs=configs, data=data)
-    print(f"Average winner coins: {average_cycles:.2f}")
+    print(f"Average pot coins: {average_cycles:.2f}")
