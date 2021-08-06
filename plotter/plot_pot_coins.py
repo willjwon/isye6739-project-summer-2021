@@ -38,7 +38,7 @@ def plot_pot_coins(configs: Dict, data: pd.DataFrame) -> None:
 
     fig.set_size_inches(7, 5)
     fig.tight_layout()
-    # fig.show()
+    fig.show()
     fig.savefig('../graph/pot_coins.pdf')
     fig.clf()
     plt.close(fig=fig)
